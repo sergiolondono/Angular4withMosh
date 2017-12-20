@@ -1,9 +1,20 @@
 
 <h1>Angular</h1>
 
-<authors></authors>
+<!-- <div class="container">
+    <input [(ngModel)]="movie" class="form-control"/>
+</div>
+
+
+{{ movie | titleCase}}
+
+<br/>
 
 <courses></courses>
 
-<users></users>
+<authors></authors>
+
+<users></users> -->
+
+<favorite [isFavorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></favorite>
 

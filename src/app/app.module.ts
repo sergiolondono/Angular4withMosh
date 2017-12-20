@@ -1,3 +1,4 @@
+import { SummaryPipe } from './summary.pipe';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
@@ -11,6 +12,8 @@ import { CoursesService } from './courses.service';
 import { AuthorsService } from './authors.service';
 import { UsersComponent } from './users/users.component';
 import { UserService } from './user.service';
+import { FavoriteComponent } from './favorite/favorite.component';
+import { TitleCasePipe } from './title-case.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { UserService } from './user.service';
     CoursesComponent,
     CourseComponent,
     AuthorsComponent,
-    UsersComponent
+    UsersComponent,
+    SummaryPipe,
+    FavoriteComponent,
+    TitleCasePipe
   ],
   imports: [
     BrowserModule,
