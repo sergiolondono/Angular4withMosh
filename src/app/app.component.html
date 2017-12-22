@@ -1,5 +1,5 @@
 
-<h1>Angular</h1>
+<!-- <h1>Angular</h1> -->
 
 <!-- <div class="container">
     <input [(ngModel)]="movie" class="form-control"/>
@@ -14,7 +14,18 @@
 
 <authors></authors>
 
-<users></users> -->
+<users></users> 
 
-<favorite [isFavorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></favorite>
+<favorite [isFavorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></favorite> -->
+
+<!-- <bootstrap-panel>
+    <ng-container class="heading">Heading</ng-container>
+    <div class="body">
+        <h2>Body</h2>
+        <p>Some content here...</p>
+    </div>
+</bootstrap-panel> -->
+
+<like [isActive]="post.isActive" (change)="onlikeChanged($event)"></like>
+<label id="pCount"></label>
 

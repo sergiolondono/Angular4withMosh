@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-//import { EventEmitter } from '@angular/core/src/event_emitter';
 
 @Component({
   selector: 'favorite',
