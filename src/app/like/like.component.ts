@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'like',
@@ -9,17 +9,10 @@ export class LikeComponent {
 
   @Input('isActive') isActive: boolean;
   @Input('likesCount') likesCount: number;
-  @Output('change') click = new EventEmitter();
-
-  constructor() { }
 
   onClick(){
+    this.likesCount += (this.isActive) ? -1 : 1;
     this.isActive = !this.isActive;
-    this.likesCount = this.likesCount == 0 ? 1 : 0;
-    this.click.emit(this.likesCount);
   }
 }
 
-export interface LikeChangedEventArgs{
-  newValue: boolean
-}

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { FavoriteChangedEventArgs } from './favorite/favorite.component';
-import { LikeChangedEventArgs } from './like/like.component';
 
 @Component({
   selector: 'app-root',
@@ -10,18 +9,58 @@ import { LikeChangedEventArgs } from './like/like.component';
 export class AppComponent {
   title = 'Angular app';
 
-  post= {
-    title: "Title",
-    isFavorite: true,
-    isActive: true,
-    likesCount: 0
-  } 
+  // post= {
+  //   title: "Title",
+  //   isFavorite: true,
+  //   isActive: true,
+  //   likesCount: 0
+  // } 
 
-  onFavoriteChanged(eventArgs: FavoriteChangedEventArgs){
-    console.log('Favorite changed: ', eventArgs);
+  // tweet = {
+  //   body: '...',
+  //   likesCount: 10,
+  //   isLiked: true
+  // }
+
+  // onFavoriteChanged(eventArgs: FavoriteChangedEventArgs){
+  //   console.log('Favorite changed: ', eventArgs);
+  // }
+
+  // courses = [1, 2];
+
+  // viewMode = 'somethingElse';
+
+  // courses = [
+  //   { id: 1, name: 'course1'},
+  //   { id: 2, name: 'course2'},
+  //   { id: 3, name: 'course3'},
+  //   { id: 4, name: 'course4'}
+  // ];
+
+  // onAdd(){
+  //   this.courses.push({ id: this.courses.length + 1, name: 'course' + (this.courses.length + 1) });
+  // }
+
+  // // onRemove(course){
+  // //   let index = this.courses.indexOf(course);
+  // //   this.courses.splice(index, 1);
+  // // }
+
+  // onChange(course){
+  //   course.name = 'UPDATED';
+  // }
+  courses;
+
+  loadCourses(){
+    this.courses = [
+      { id: 1, name: 'course1'},
+      { id: 2, name: 'course2'},
+      { id: 3, name: 'course3'},
+      { id: 4, name: 'course4'}
+    ];
   }
 
-  onlikeChanged(eventArgs: LikeChangedEventArgs){
-    document.getElementById('pCount').innerHTML = eventArgs.toString();
+  trackCourse(index, course){
+    return course ? course.id : undefined;
   }
 }
