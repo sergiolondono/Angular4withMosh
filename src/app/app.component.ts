@@ -9,6 +9,17 @@ import { FavoriteChangedEventArgs } from './favorite/favorite.component';
 export class AppComponent {
   title = 'Angular app';
 
+  // task = {    
+  //   assignee: {
+  //     name: 'John Smith'
+  //   }
+  // }
+
+  //  canSave = false;
+  //  onChangedStyle(){
+  //    this.canSave = !this.canSave;
+  //  }
+
   // post= {
   //   title: "Title",
   //   isFavorite: true,
