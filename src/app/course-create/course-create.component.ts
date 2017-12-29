@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'course-create',
   templateUrl: './course-create.component.html',
   styleUrls: ['./course-create.component.css']
 })
-export class CourseCreateComponent implements OnInit {
+export class CourseCreateComponent {
 
 categories = [
   {id: 1, name: 'Development'},
@@ -13,9 +13,8 @@ categories = [
   {id: 3, name: 'Languages'}
 ];
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+submit(course){
+  console.log(course);
+}
 
 }
