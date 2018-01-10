@@ -1,3 +1,29 @@
-<p>
-  followers works!
-</p>
+<h1>My Followers</h1>
+
+<div 
+  *ngFor="let follower of followers"  
+  class="media">
+  <div class="media-left">
+    <img src="{{ follower.avatar_url }}" class="avatar media-object">
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">{{ follower.login}}</h4>
+    <p><a href="{{ follower.html_url }}">{{ follower.html_url }}</a></p>
+  </div>
+</div>
+
+<!-- <div *ngFor="let follower of followers" 
+    class="form-group">
+    <div class="form-inline">
+      <img 
+      src="{{ follower.avatar_url }}" 
+      alt="{{ follower.login}}"
+      class="img-responsive img-circle">  
+      
+      {{ follower.login}}
+
+      <a href="{{ follower.html_url }}">{{ follower.html_url }}</a>  
+    </div>  
+</div> -->
+    
+ 

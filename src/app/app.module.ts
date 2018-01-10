@@ -28,6 +28,7 @@ import { PostsComponent } from './posts/posts.component';
 import { PostService } from './services/post.service';
 import { AppErrorHandler } from './common/app-error.handler';
 import { FollowersComponent } from './followers/followers.component';
+import { FollowerService } from './services/follower.service';
 
 @NgModule({
   declarations: [
@@ -62,6 +63,7 @@ import { FollowersComponent } from './followers/followers.component';
     CoursesService,
     AuthorsService,
     UserService,
+    FollowerService,
     { provide: ErrorHandler, useClass: AppErrorHandler}
   ],
   bootstrap: [AppComponent]
