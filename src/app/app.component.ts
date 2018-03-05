@@ -1,5 +1,7 @@
+import { NotFoundComponent } from './not-found/not-found.component';
 import { Component } from '@angular/core';
 import { FavoriteChangedEventArgs } from './favorite/favorite.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',

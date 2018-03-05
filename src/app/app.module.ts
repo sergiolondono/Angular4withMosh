@@ -33,7 +33,15 @@ import { FollowerService } from './services/follower.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { GithubProfileComponent } from './github-profile/github-profile.component';
-import { RouterModule } from '@angular/router';
+import { RouterModule, ROUTES } from '@angular/router';
+import { ChartsComponent } from './charts/charts.component';
+import { ChartsModule } from 'ng2-charts';
+import { LineChartDemoComponent } from './line-chart-demo/line-chart-demo.component';
+import { DoughnutChartComponent } from './doughnut-chart/doughnut-chart.component';
+import { RadarChartComponent } from './radar-chart/radar-chart.component';
+import { PieChartComponent } from './pie-chart/pie-chart.component';
+import { PolarAreaChartComponent } from './polar-area-chart/polar-area-chart.component';
+import { DynamicChartComponent } from './dynamic-chart/dynamic-chart.component';
 
 @NgModule({
   declarations: [
@@ -59,13 +67,21 @@ import { RouterModule } from '@angular/router';
     NavbarComponent,
     HomeComponent,
     GithubProfileComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ChartsComponent,
+    LineChartDemoComponent,
+    DoughnutChartComponent,
+    RadarChartComponent,
+    PieChartComponent,
+    PolarAreaChartComponent,
+    DynamicChartComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpModule,
+    HttpModule,  
+    ChartsModule,  
     RouterModule.forRoot([
       { 
         path: '', 
@@ -82,6 +98,34 @@ import { RouterModule } from '@angular/router';
       { 
         path: 'posts', 
         component: PostsComponent 
+      },
+      {
+        path: 'charts',
+        component: ChartsComponent
+      },
+      {
+        path: 'barChart',
+        component: LineChartDemoComponent
+      },
+      {
+        path: 'doughnutChart',
+        component: DoughnutChartComponent
+      },      
+      {
+        path: 'radarChart',
+        component: RadarChartComponent
+      },  
+      {
+        path: 'pieChart',
+        component: PieChartComponent
+      },     
+      {
+        path: 'polarAreaChart',
+        component: PolarAreaChartComponent
+      },   
+      {
+        path: 'dynamicChart',
+        component: DynamicChartComponent
       },
       { 
         path: '**', 
@@ -100,3 +144,4 @@ import { RouterModule } from '@angular/router';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
